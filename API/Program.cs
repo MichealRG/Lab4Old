@@ -13,8 +13,9 @@ namespace API
         {
             var api =new Website( "https://api.collegefootballdata.com/");
             var teams = api.DownloadAsync("/teams/fbs").Result.Content;
-            var coaches = api.DownloadAsync("/coaches").Result.Content;
             var teamsCollection = JsonConvert.DeserializeObject<teamsCollection>(teams);
+            var coaches = api.DownloadAsync($"/coaches?team=Akron").Result.Content; //tu jest przykład ze pobiera tylko dla Akrona ale powino pobrać dla każdego teamu z teams tylko nie mam tych danych pobranych
+
             Console.WriteLine(teamsCollection.Teams.Count); 
             //Console.WriteLine( api.Download("/api/docs/?url=/api-docs.json"));
             //Console.WriteLine( api.DownloadAsync("/api/docs/?url=/api-docs.json"));
