@@ -4,9 +4,11 @@ using System.Text;
 
 namespace API
 {
-    class coaches
+    public class coaches
     {
-        public string first_name { get; set; }
-        public string last_name { get; set; }
+        public int Id { get; set; }
+        public string First_name { get; set; }
+        public string Last_name { get; set; }
+        public List<Season> Seasons { get; set; }
     }
 }

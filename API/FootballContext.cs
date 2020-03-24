@@ -7,7 +7,7 @@ using DbContext = Microsoft.EntityFrameworkCore.DbContext;
 
 namespace API
 {
-    class FootballContext:DbContext
+    public class FootballContext:DbContext
     {
         public System.Data.Entity.DbSet<teams> Teams { get; set; }
         public System.Data.Entity.DbSet<coaches> Coaches { get; set; }
