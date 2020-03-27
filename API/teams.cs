@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace API
 {
      public class teams
     {
+        [JsonIgnore]
         public int id { get; set; }
         public string School { get; set; }
         //public string mascot { get; set; }
